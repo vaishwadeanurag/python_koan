@@ -15,13 +15,13 @@ class AboutAsserts(Koan):
         """
         Enlightenment may be more easily achieved with appropriate messages.
         """
-        self.assertTrue(False, "This should be true -- Please fix this")
+        self.assertTrue(True, "This should be true -- Please fix this")
 
     def test_fill_in_values(self):
         """
         Sometimes we will ask you to fill in the values
         """
-        self.assertEqual(__, 1 + 1)
+        self.assertEqual(2, 1 + 1)
 
     def test_assert_equality(self):
         """
