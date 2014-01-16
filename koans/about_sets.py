@@ -9,7 +9,7 @@ class AboutSets(Koan):
         
         there_can_only_be_only_one = set(highlanders)
 
-        self.assertEqual(__, there_can_only_be_only_one)
+        self.assertEqual(set(['MacLeod', 'Ramirez', 'MacLeod', 'Matunas', 'MacLeod', 'Malcolm', 'MacLeod']), there_can_only_be_only_one)
 
     def test_sets_are_unordered(self):
         self.assertEqual(set([__, __, __, __, __]), set('12345'))
