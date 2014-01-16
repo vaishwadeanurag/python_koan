@@ -22,15 +22,15 @@ class AboutExceptions(Koan):
         except StandardError as ex:
             result = 'exception handled'
         
-        self.assertEqual(__, result)
+        self.assertEqual('exception handled', result)
     
-        self.assertEqual(____, isinstance(ex, StandardError))
-        self.assertEqual(____, isinstance(ex, RuntimeError))
+        self.assertEqual(True, isinstance(ex, StandardError))
+        self.assertEqual(False, isinstance(ex, RuntimeError))
     
         self.assertTrue(issubclass(RuntimeError, StandardError), \
             "RuntimeError is a subclass of StandardError")
         
-        self.assertEqual(__, ex[0])
+        self.assertEqual("Oops", ex[0])
     
     def test_raising_a_specific_error(self):
         result = None
