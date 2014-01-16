@@ -53,14 +53,14 @@ class AboutLists(Koan):
     
     def test_lists_and_ranges(self):
         self.assertEqual(list, type(range(5)))
-        self.assertEqual(__, range(5))
-        self.assertEqual(__, range(5, 9))
+        self.assertEqual([0,1,2,3,4], range(5))
+        self.assertEqual([5,6,7,8], range(5, 9))
 
     def test_ranges_with_steps(self):
-        self.assertEqual(__, range(0, 8, 2))
-        self.assertEqual(__, range(1, 8, 3))
-        self.assertEqual(__, range(5, -7, -4))
-        self.assertEqual(__, range(5, -8, -4))
+        self.assertEqual([0,2,4,6], range(0, 8, 2))
+        self.assertEqual([1,4,7], range(1, 8, 3))
+        self.assertEqual([5,1,-3], range(5, -7, -4))
+        self.assertEqual([5,1,-3,-7], range(5, -8, -4))
 
     def test_insertions(self):
         knight = ['you', 'shall', 'pass']
