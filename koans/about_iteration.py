@@ -101,7 +101,7 @@ class AboutIteration(Koan):
     def test_all_iteration_methods_work_on_any_sequence_not_just_lists(self):
         # Ranges are an iteratable sequence
         result = map(self.add_ten, range(1,4))
-        self.assertEqual(__, list(result))
+        self.assertEqual([11,12,13], list(result))
 
         try:
             # Files act like a collection of lines
@@ -109,7 +109,7 @@ class AboutIteration(Koan):
     
             def make_upcase(line) : return line.strip().upper()
             upcase_lines = map(make_upcase, file.readlines())
-            self.assertEqual(__, list(upcase_lines))
+            self.assertEqual(['THIS', 'IS', 'A', 'TEST'], list(upcase_lines))
             
             # NOTE: You can create your own collections that work with each,
             # map, select, etc.
