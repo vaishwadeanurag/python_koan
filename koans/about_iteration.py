@@ -37,7 +37,7 @@ class AboutIteration(Koan):
         seq = [1, 2, 3]
    
         mapped_seq = map(self.add_ten, seq)
-        self.assertEqual(__, mapped_seq)
+        self.assertEqual([11,12,13], mapped_seq)
         
     def test_filter_selects_certain_items_from_a_list(self):
         def is_even(item): return (item % 2) == 0
@@ -45,7 +45,7 @@ class AboutIteration(Koan):
         seq = [1, 2, 3, 4, 5, 6]
    
         even_numbers = filter(is_even, seq)
-        self.assertEqual(__, even_numbers)
+        self.assertEqual([2,4,6], even_numbers)
     
     def test_just_return_first_item_found(self):
         def is_big_name(item): return len(item) > 4
