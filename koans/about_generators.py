@@ -94,7 +94,9 @@ class AboutGenerators(Koan):
         yield result
     
     def test_generators_can_take_coroutines(self):
-        generator = self.generator_with_coroutine()
+        generator = self.generator_with_coroutine()  
+        #when one yeild statment is stored as a result it is called with none 
+        #and a value is send and that value is the result
 
         # THINK ABOUT IT:
         # Why is this line necessary?
@@ -103,15 +105,16 @@ class AboutGenerators(Koan):
         #       section of http://www.python.org/dev/peps/pep-0342/
         next(generator)
 
-        self.assertEqual(__, generator.send(1 + 2))
+        self.assertEqual(3, generator.send(1 + 2))
 
     def test_before_sending_a_value_to_a_generator_next_must_be_called(self):
         generator = self.generator_with_coroutine()
-
+        
         try:
             generator.send(1+2)
         except TypeError as ex:
-            self.assertMatch(__, ex[0])
+            self.assertMatch("can't send non-None value to a just-started generator", ex[0])
+        #generator is not called even once so no values is there in this case 
 
     # ------------------------------------------------------------------
     
