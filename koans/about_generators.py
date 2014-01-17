@@ -39,10 +39,10 @@ class AboutGenerators(Koan):
         dynamite = ('Boom!' for n in range(3))
 
         attempt1 = list(dynamite)
-        attempt2 = list(dynamite)
+        attempt2 = list(dynamite) #all the iter items are iterated already so the iter object is empty
         
-        self.assertEqual(__, list(attempt1))
-        self.assertEqual(__, list(attempt2))
+        self.assertEqual(['Boom!','Boom!','Boom!'], list(attempt1)) #list of list of list is a list single time
+        self.assertEqual([], list(attempt2))
     
     # ------------------------------------------------------------------
     
