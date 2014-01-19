@@ -104,8 +104,9 @@ class AboutClasses(Koan):
         self.assertEqual('Fido', fido.name)
     
     def test_args_must_match_init(self):
-        self.assertRaises(___, self.Dog5) # Evaluates self.Dog5()
-        
+        self.assertRaises(TypeError, self.Dog5) # Evaluates self.Dog5()
+
+        #Self is by default passed as one argument        
         # THINK ABOUT IT:
         # Why is this so?
     
