@@ -41,16 +41,10 @@ def score(dice):
         occurence = dice.count(i)
         if occurence >= 3:
             if i == 1:
-                if occurence == 6:
-                    score += 2000
-                    return score
                 score += 1000
                 occurence -= 3
                 score += occurence * 100
             else:
-                if occurence == 6:
-                    score += i * 100 * 2
-                    return score
                 score += i * 100
                 if i == 5:
                     occurence -= 3
